@@ -1,42 +1,44 @@
-<?php
+ <html>
+ <head>
+ 	<!--Import Google Icon Font-->
+ 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 	<!-- Compiled and minified CSS -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ 	<!--Let browser know website is optimized for mobile-->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 	<link rel="stylesheet" href="style.css">
+ </head>
 
+ <body>
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col s12">
+ 				<h2>Projeto Competidor de Natação</h2>
+ 				<blockquote>
+ 					Formulário para entrada dos Dados
+ 				</blockquote>
+ 			</div>
+ 			<form action="script.php" method="post">
+ 				<div class="input-field col s12 m6">
+ 					<input placeholder="Ex: Dino da Silva Sauro" id="nome" name="nome" type="text" class="validate">
+ 					<label for="nome">Digite o nome</label>
+ 				</div>
+ 				<div class="input-field col s12 m6">
+ 					<input placeholder="Ex: 18" id="idade" name="idade" type="number" class="validate">
+ 					<label for="idade">Digite a idade</label>
+ 				</div>
+ 				<div class="input-field col s6">
+ 					<button class="btn btn-large" type="submit">Enviar</button>
+ 				</div>
+ 			</form>
+ 		</div>
+ 	</div>
 
-$categorias = [];
-$categorias[] = "Infantil";
-$categorias[] = "Adolecente";
-$categorias[] = "Adulto";
-
-
-$nome = 'Christian';
-$idade = 6;
-
-
-if($idade <= 12):
-    for($i = 0; $i < count($categorias); $i++):
-        if($categorias[$i] == 'Infantil'):
-           echo 'O nadador '.$nome. 'compete na categoria ' .$categorias[$i];
-        endif;
-    endfor;
-elseif($idade >= 13 && $idade <= 18):
-    for($i = 0; $i < count($categorias); $i++):
-        if($categorias[$i] == 'Adolecente'):
-           echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
-        endif;
-    endfor;
-elseif($idade >= 19):
-    for($i = 0; $i < count($categorias); $i++):
-        if($categorias[$i] == 'Adulto'):
-           echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
-        endif;
-    endfor;
-else:
-    echo'Sem categoria indicada';
-endif;
-
-
-
-
-
+ 	
 
 
 
+ 	<!-- Compiled and minified JavaScript -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ </body>
+ </html>
