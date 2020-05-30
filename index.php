@@ -1,4 +1,8 @@
- <html>
+ <?php 
+ session_start();
+ ?>
+ <!DOCTYPE html>
+ <html lang="pt-br">
  <head>
  	<meta charset="utf-8">
  	<!--Import Google Icon Font-->
@@ -20,6 +24,32 @@
  					Formulário para entrada dos Dados
  				</blockquote>
  			</div>
+ 			<?php 
+ 			$exibeSucesso = isset($_SESSION['mensagen-de-sucesso']) ? $_SESSION['mensagen-de-sucesso'] : '';
+ 			if(!empty($exibeSucesso)):
+ 				echo
+ 				'
+ 				<div class="row">
+ 				<div class="col s12 green">
+ 				<h6 class="white-text">'.$exibeSucesso.'</h6>
+ 				</div>
+ 				</div>
+ 				';
+
+ 			endif;
+ 			$exibeErro = isset($_SESSION['mensagen-de-erro']) ? $_SESSION['mensagen-de-erro'] : '';
+ 			if(!empty($exibeErro)):
+ 				echo
+ 				'
+ 				<div class="row">
+ 				<div class="col s12 red">
+ 				<h6 class="white-text">'.$exibeErro.'</h6>
+ 				</div>
+ 				</div>
+ 				';
+
+ 			endif;
+ 			?>
  			<form action="script.php" method="post">
  				<div class="input-field col s12 m6">
  					<input placeholder="Ex: Dino da Silva Sauro" id="nome" name="nome" type="text" class="validate">
@@ -36,6 +66,7 @@
  		</div>
  	</div>
 
+ 	
  	
 
 
