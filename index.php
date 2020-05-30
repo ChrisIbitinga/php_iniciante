@@ -26,7 +26,7 @@
  					<label for="nome">Digite o nome</label>
  				</div>
  				<div class="input-field col s12 m6">
- 					<input placeholder="Ex: 18" id="idade" name="idade" type="number" class="validate">
+ 					<input placeholder="Ex: 18" id="idade" name="idade" type="text" class="validate">
  					<label for="idade">Digite a idade</label>
  				</div>
  				<div class="input-field col s6">

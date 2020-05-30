@@ -21,6 +21,10 @@ if(empty($nome)):
 endif;
 if(strlen($nome) <= 2 or strlen($nome) >= 40):
     echo 'O nome deve conter pelo menos 3 caracteres e no máximo 23 caracteres.';
+return;
+endif;
+if(!is_numeric($idade)):
+    echo 'O campo idade deve ser preenchido apenas com números.';
     return;
 endif;
 
@@ -28,21 +32,21 @@ endif;
 if($idade <= 12 && $idade >= 1):
     for($i = 0; $i < count($categorias); $i++):
         if($categorias[$i] == 'Infantil'):
-           echo 'O nadador '.$nome. 'compete na categoria ' .$categorias[$i];
-        endif;
-    endfor;
+         echo 'O nadador '.$nome. 'compete na categoria ' .$categorias[$i];
+     endif;
+ endfor;
 elseif($idade >= 13 && $idade <= 18):
     for($i = 0; $i < count($categorias); $i++):
         if($categorias[$i] == 'Adolecente'):
-           echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
-        endif;
-    endfor;
+         echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
+     endif;
+ endfor;
 elseif($idade >= 19):
     for($i = 0; $i < count($categorias); $i++):
         if($categorias[$i] == 'Adulto'):
-           echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
-        endif;
-    endfor;
+         echo 'O nadador '.$nome. 'compete na categoria '.$categorias[$i];
+     endif;
+ endfor;
 else:
     echo'Sem categoria indicada';
 endif;
