@@ -15,7 +15,17 @@ $idade =$_POST['idade'];
 // var_dump($idade);
 
 
-if($idade <= 12):
+if(empty($nome)):
+    echo 'O nome não pode ser vazio.';
+    return;
+endif;
+if(strlen($nome) <= 2 or strlen($nome) >= 40):
+    echo 'O nome deve conter pelo menos 3 caracteres e no máximo 23 caracteres.';
+    return;
+endif;
+
+
+if($idade <= 12 && $idade >= 1):
     for($i = 0; $i < count($categorias); $i++):
         if($categorias[$i] == 'Infantil'):
            echo 'O nadador '.$nome. 'compete na categoria ' .$categorias[$i];
