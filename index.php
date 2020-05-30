@@ -1,6 +1,8 @@
  <html>
  <head>
+ 	<meta charset="utf-8">
  	<!--Import Google Icon Font-->
+ 	<title>1° Projeto PHP | Digital Innovation</title>
  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  	<!-- Compiled and minified CSS -->
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">

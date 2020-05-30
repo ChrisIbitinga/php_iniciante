@@ -7,8 +7,12 @@ $categorias[] = "Adolecente";
 $categorias[] = "Adulto";
 
 
-$nome = 'Christian';
-$idade = 6;
+$nome = $_POST['nome'];
+$idade =$_POST['idade'];
+
+// var_dump($nome);
+// echo '<br>';
+// var_dump($idade);
 
 
 if($idade <= 12):
