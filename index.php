@@ -21,7 +21,7 @@
  			<div class="col s12">
  				<h2>Projeto Competidor de Natação</h2>
  				<blockquote>
- 					Formulário para entrada dos Dados
+ 					Sistema para demostrar a categoria em que um atleta será cadastrado.
  				</blockquote>
  			</div>
  			<?php 

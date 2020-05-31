@@ -49,6 +49,12 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
 				}
 			}
 		}
+		elseif($idade < 8)
+		{
+			removeMensagemSucesso();
+			setarMensagemErro($mensagem = 'O competidor precisa ter pelomenos 8 anos para ser cadastrado.');
+			return null;
+		}
 	}
 	else
 	{
