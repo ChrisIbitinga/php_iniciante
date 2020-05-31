@@ -1,5 +1,5 @@
  <?php 
- session_start();
+ include 'servico/servicoMensagemSessao.php';
  ?>
  <!DOCTYPE html>
  <html lang="pt-br">
@@ -25,8 +25,9 @@
  				</blockquote>
  			</div>
  			<?php 
- 			$exibeSucesso = isset($_SESSION['mensagen-de-sucesso']) ? $_SESSION['mensagen-de-sucesso'] : '';
- 			if(!empty($exibeSucesso)):
+ 			$exibeSucesso = obterMensagemSucesso();
+ 			if(!empty($exibeSucesso))
+ 			{
  				echo
  				'
  				<div class="row">
@@ -35,10 +36,11 @@
  				</div>
  				</div>
  				';
-
- 			endif;
- 			$exibeErro = isset($_SESSION['mensagen-de-erro']) ? $_SESSION['mensagen-de-erro'] : '';
- 			if(!empty($exibeErro)):
+ 			}
+ 				
+ 			$exibeErro = obterMensagemErro();
+ 			if(!empty($exibeErro))
+ 			{
  				echo
  				'
  				<div class="row">
@@ -47,8 +49,8 @@
  				</div>
  				</div>
  				';
+ 			}
 
- 			endif;
  			?>
  			<form action="script.php" method="post">
  				<div class="input-field col s12 m6">
